@@ -1,0 +1,8 @@
+set $mod Mod1
+set $win Mod4
+set $lock i3-lock --clock --fade-in 0 --screenshots --effect-blur 7x5 --indicator
+
+include ~/.config/i3/autostart.conf
+include ~/.config/i3/keybinds.conf
+#include ~/.config/i3/monitors.conf
+include ~/.config/i3/styling.conf
