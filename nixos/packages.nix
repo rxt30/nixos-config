@@ -7,7 +7,7 @@
     git
     python
     sudo
-    nmtui
+    networkmanager
     nodejs
     xterm
   ];
