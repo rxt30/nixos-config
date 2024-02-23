@@ -56,7 +56,6 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
-    keyMap = "de";
     useXkbConfig = true; # use xkb.options in tty.
   };
 
@@ -82,6 +81,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.mime = {
     isNormalUser = true;
+    initialPassword = "pleasechangeme";
     extraGroups = [ "wheel" "vboxsf" ];
   };
   system.stateVersion = "23.11"; # Did you read the comment?
