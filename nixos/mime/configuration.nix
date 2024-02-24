@@ -69,7 +69,8 @@
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
     libinput.enable = true;
-    # windowManager.i3.enable = true;
+    windowManager.i3.enable = true;
+    windowManager.i3.package = pkgs.i3-gaps;
   };
 
   # Enable CUPS to print documents.
@@ -79,6 +80,9 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
+  # Virtualbox
+  virtualisation.virtualbox.guest.enable = true;
+  virtualisation.virtualbox.guest.x11 = true;
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.mime = {
     isNormalUser = true;
