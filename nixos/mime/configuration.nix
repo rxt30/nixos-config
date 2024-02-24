@@ -69,7 +69,7 @@
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
     libinput.enable = true;
-    windowManager.i3.enable = true;
+    # windowManager.i3.enable = true;
   };
 
   # Enable CUPS to print documents.

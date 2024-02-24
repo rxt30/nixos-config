@@ -112,4 +112,5 @@ in {
     source = ../config/i3/switch_workspace.py;
     target = ".config/i3/switch_workspace.py";
   };
+  xsession.enable = true;
 }
