@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../packages.nix
+      ../general.nix
     ];
 
   nixpkgs = {
@@ -88,6 +88,7 @@
     isNormalUser = true;
     initialPassword = "pleasechangeme";
     extraGroups = [ "wheel" "vboxsf" ];
+    shell = pkgs.fish;
   };
   system.stateVersion = "23.11"; # Did you read the comment?
 }

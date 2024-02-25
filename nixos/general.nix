@@ -1,5 +1,7 @@
 { config, pkgs, inputs, ... }:
 {
+  programs.fish.enable = true;
+
   environment.systemPackages = with pkgs; [
     inputs.home-manager.packages.${pkgs.system}.default
     neovim
@@ -11,5 +13,6 @@
     networkmanager
     nodejs
     xterm
+    fish
   ];
 }
