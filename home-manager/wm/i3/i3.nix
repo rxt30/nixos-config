@@ -2,7 +2,8 @@
 let
   mod = "Mod1";
   win = "Mod4";
-in {
+in
+{
   xsession.windowManager.i3 = {
     enable = true;
     config = {
@@ -15,7 +16,7 @@ in {
         "Print" = "exec \"grimshot save area - | swappy -f -\"";
         "$win+Shift+p" = "exec \"~/.config/sway/duplicateDisplay.sh\"";
         "${mod}+b" = "exec \"MOZ_ENABLE_WAYLAND=1 firefox\"";
-        
+
         "${mod}+h" = "focus left";
         "${mod}+j" = "focus down";
         "${mod}+k" = "focus up";
@@ -24,18 +25,18 @@ in {
         "${mod}+Shift+j" = "move down";
         "${mod}+Shift+k" = "move up";
         "${mod}+Shift+l" = "move right";
-        
+
         "${mod}+Control+h" = "split h";
         "${mod}+Control+v" = "split v";
-        
+
         "${mod}+f" = "fullscreen toggle";
-        
+
         "${mod}+s" = "layout stacking";
         "${mod}+w" = "layout tabbed";
         "${mod}+e" = "layout toggle split";
-        
+
         "${mod}+space" = "floating toggle";
-        
+
         "${mod}+1" = "workspace number \"1\"";
         "${mod}+2" = "workspace number \"2\"";
         "${mod}+3" = "workspace number \"3\"";
@@ -48,7 +49,7 @@ in {
         "${mod}+0" = "workspace number \"10\"";
         "${mod}+u" = "exec \"python ~/.config/sway/switch_workspace.py -b\"";
         "${mod}+o" = "exec \"python ~/.config/sway/switch_workspace.py\"";
-        
+
         "${mod}+Shift+1" = "move container to workspace number \"1\"";
         "${mod}+Shift+2" = "move container to workspace number \"2\"";
         "${mod}+Shift+3" = "move container to workspace number \"3\"";
@@ -61,27 +62,27 @@ in {
         "${mod}+Shift+0" = "move container to workspace number \"10\"";
         "${mod}+Shift+u" = "exec \"python ~/.config/sway/switch_workspace.py -c -b && python ~/.config/sway/switch_workspace.py -b\"";
         "${mod}+Shift+o" = "exec \"python ~/.config/sway/switch_workspace.py -c && python ~/.config/sway/switch_workspace.py\"";
-        
+
         "${mod}+Shift+r" = "reload";
         "${mod}+Shift+q" = "quit";
-        
+
         # Special lock command
-         "${win}+l" = "exec ${lock}"; 
-        
+        # "${win}+l" = "exec ${lock}"; 
+
         # Bind special keyboard keys
-         "XF86AudioRaiseVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ +5%";
-         "XF86AudioLowerVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ -5%";
-         "XF86AudioMute" = "exec pactl set-sink-mute @DEFAULT_SINK@ toggle";
-         "XF86AudioMicMute" = "exec pactl set-source-mute @DEFAULT_SOURCE@ toggle";
-         "XF86MonBrightnessDown" = "exec brightnessctl set 5%-";
-         "XF86MonBrightnessUp" = "exec brightnessctl set +5%";
-         "XF86AudioPlay" = "exec playerctl play-pause";
-         "XF86AudioNext" = "exec playerctl next";
-         "XF86AudioPrev" = "exec playerctl previous";
-        
+        "XF86AudioRaiseVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ +5%";
+        "XF86AudioLowerVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ -5%";
+        "XF86AudioMute" = "exec pactl set-sink-mute @DEFAULT_SINK@ toggle";
+        "XF86AudioMicMute" = "exec pactl set-source-mute @DEFAULT_SOURCE@ toggle";
+        "XF86MonBrightnessDown" = "exec brightnessctl set 5%-";
+        "XF86MonBrightnessUp" = "exec brightnessctl set +5%";
+        "XF86AudioPlay" = "exec playerctl play-pause";
+        "XF86AudioNext" = "exec playerctl next";
+        "XF86AudioPrev" = "exec playerctl previous";
+
         # Scratchpad keys
-         "${mod}+m" = "move scratchpad";
-         "${mod}+Tab" = "scratchpad show";
+        "${mod}+m" = "move scratchpad";
+        "${mod}+Tab" = "scratchpad show";
       };
       startup = [
         {
@@ -93,7 +94,7 @@ in {
         }
       ];
       fonts = {
-        names = ["pango:DejaVu Sans Mono 9"];
+        names = [ "pango:DejaVu Sans Mono 9" ];
       };
       gaps = {
         smartGaps = true;
@@ -105,11 +106,11 @@ in {
   programs.kitty = {
     enable = true;
     extraConfig = ''
-      ${builtins.readFile ../config/kitty/kitty.conf} 
+      ${builtins.readFile ../../utility/kitty/kitty.conf} 
     '';
   };
   home.file.workspace-switch = {
-    source = ../config/i3/switch_workspace.py;
+    source = ./scripts/switch_workspace.py;
     target = ".config/i3/switch_workspace.py";
   };
   xsession.enable = true;

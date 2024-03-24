@@ -1,19 +1,21 @@
 # This is your home-manager configuration file
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
-{
-  inputs,
-  lib,
-  config,
-  pkgs,
-  ...
+{ inputs
+, lib
+, config
+, pkgs
+, ...
 }: {
   # You can import other home-manager modules here
   imports = [
     # If you want to use home-manager modules from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModule
-
     ./packages/general-packages.nix
     ./packages/mime-packages.nix
+    ./utility/fish/fish.nix
+    ./utility/nvim/nvim.nix
+    ./wm/i3/i3.nix
+    ./wm/hyprland/hyprland.nix
   ];
 
   nixpkgs = {
@@ -38,7 +40,6 @@
     };
   };
 
-  # TODO: Set your username
   home = {
     username = "mime";
     homeDirectory = "/home/mime";
