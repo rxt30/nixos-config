@@ -114,10 +114,16 @@
     '';
   };
 
-  #imports = [
-  #  "../../utility/foot/foot.nix"
-  #  "../../utility/fuzzel/fuzzel.nix"
-  #  "../../utility/dunst/dunst.nix"
-  #  "../../utility/waybar/waybar.nix"
-  #];
+  imports = [
+    ../../utility/foot/foot.nix
+    ../../utility/fuzzel/fuzzel.nix
+    ../../utility/dunst/dunst.nix
+    ../../utility/waybar/waybar.nix
+    ../../utility/kanshi/kanshi.nix
+    ../../utility/swayidle/swayidle.nix
+    ../../utility/swaylock/swaylock.nix
+  ];
+  home.packages = with pkgs; [
+    wl-clipboard
+  ];
 }

@@ -1,10 +1,6 @@
 # This is your home-manager configuration file
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
-{ inputs
-, lib
-, config
-, pkgs
-, ...
+{ ...
 }: {
   # You can import other home-manager modules here
   imports = [
@@ -15,16 +11,11 @@
     # ./nvim.nix
     ./packages/maxh-packages.nix
     ./packages/general-packages.nix
-    #./packages/lsp.nix
+    ./packages/lsp.nix
     ./wm/i3/i3.nix
     ./wm/hyprland/hyprland.nix
     ./utility/nvim/nvim.nix
     ./utility/fish/fish.nix
-    ./utility/foot/foot.nix
-    ./utility/fuzzel/fuzzel.nix
-    ./utility/dunst/dunst.nix
-    ./utility/waybar/waybar.nix
-    ./utility/kanshi/kanshi.nix
   ];
 
   nixpkgs = {
