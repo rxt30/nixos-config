@@ -13,13 +13,18 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
+    ./packages/maxh-packages.nix
+    ./packages/general-packages.nix
+    #./packages/lsp.nix
     ./wm/i3/i3.nix
     ./wm/hyprland/hyprland.nix
     ./utility/nvim/nvim.nix
     ./utility/fish/fish.nix
     ./utility/foot/foot.nix
-    ./wm/hyprland/hyprland.nix
-    ./wm/i3/i3.nix
+    ./utility/fuzzel/fuzzel.nix
+    ./utility/dunst/dunst.nix
+    ./utility/waybar/waybar.nix
+    ./utility/kanshi/kanshi.nix
   ];
 
   nixpkgs = {
@@ -44,7 +49,6 @@
     };
   };
 
-  # TODO: Set your username
   home = {
     username = "maxh";
     homeDirectory = "/home/maxh";

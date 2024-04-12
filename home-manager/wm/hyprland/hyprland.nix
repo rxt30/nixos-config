@@ -19,7 +19,7 @@
         gaps_in = 3;
         gaps_out = 5;
         border_size = 2;
-        col.active_border = "0xffa6e3a1";
+        "col.active_border" = "0xffa6e3a1";
       };
 
       gestures = {
@@ -36,9 +36,9 @@
         "ALT,u,workspace,r-1"
         "ALT,o,workspace,r+1"
         "ALT,TAB,togglespecialworkspace"
-        "ALT SHIFT,u,movetoworkspace,r-1"
-        "ALT SHIFT,u,movetoworkspace,r+1"
-        "ALT SHIFT,u,movetoworkspace,special"
+        "ALTSHIFT,u,movetoworkspace,r-1"
+        "ALTSHIFT,o,movetoworkspace,r+1"
+        "ALTSHIFT,TAB,movetoworkspace,special"
 
         # Application
         "ALT,RETURN,exec,foot"
@@ -114,10 +114,10 @@
     '';
   };
 
-  imports = [
-    "../../utility/foot/foot.nix"
-    "../../utility/fuzzel/fuzzel.nix"
-    "../../utility/dunst/dunst.nix"
-    "../../utility/waybar/waybar.nix"
-  ];
+  #imports = [
+  #  "../../utility/foot/foot.nix"
+  #  "../../utility/fuzzel/fuzzel.nix"
+  #  "../../utility/dunst/dunst.nix"
+  #  "../../utility/waybar/waybar.nix"
+  #];
 }

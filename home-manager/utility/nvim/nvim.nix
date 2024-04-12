@@ -2,12 +2,15 @@
 
 {
   programs.neovim = {
+    enable = true;
     extraPackages = with pkgs; [
       # LazyVim
       lua-language-server
       stylua
       # Telescope
       ripgrep
+      nil
+      nixpkgs-fmt
     ];
 
     plugins = with pkgs.vimPlugins; [
