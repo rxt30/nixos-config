@@ -62,16 +62,21 @@
   # Configure keymap in X11
   services.xserver = {
     enable = true;
-    layout = "de";
-    xkbOptions = "eurosign:e,caps:escape";
+    xkb = {
+      layout = "de";
+      options = "eurosign:e,caps:escape";
+    };
 
   # Enable xserver, gdm and gnome
     displayManager.gdm.enable = true;
+    # displayManager.sddm.enable = true;
     desktopManager.gnome.enable = true;
     libinput.enable = true;
     windowManager.i3.enable = true;
     windowManager.i3.package = pkgs.i3-gaps;
   };
+
+  programs.hyprland.enable = true;
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;

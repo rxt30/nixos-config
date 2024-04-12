@@ -76,7 +76,7 @@
         "ALT,mouse:273,resizewindow"
       ];
 
-      bindel=[
+      bindel = [
         ",XF86MonBrightnessUp,exec,light -A +5"
         ",XF86MonBrightnessDown,exec,light -U +5"
       ];
@@ -101,8 +101,8 @@
       ];
 
       animation = [
-      "workspaces,1,3,default"
-      "workspaces,1,3,default"
+        "workspaces,1,3,default"
+        "workspaces,1,3,default"
       ];
     };
 
@@ -114,19 +114,10 @@
     '';
   };
 
-  programs.waybar = {
-    enable = true;
-  };
-
-  programs.foot = {
-    enable = true;
-  };
-
-  programs.fuzzel = {
-    enable = true;
-  };
-
-  services.dunst = {
-    enable = true; 
-  };
+  imports = [
+    "../../utility/foot/foot.nix"
+    "../../utility/fuzzel/fuzzel.nix"
+    "../../utility/dunst/dunst.nix"
+    "../../utility/waybar/waybar.nix"
+  ];
 }

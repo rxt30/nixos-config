@@ -1,11 +1,10 @@
 # This is your home-manager configuration file
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
-{
-  inputs,
-  lib,
-  config,
-  pkgs,
-  ...
+{ inputs
+, lib
+, config
+, pkgs
+, ...
 }: {
   # You can import other home-manager modules here
   imports = [
@@ -14,6 +13,13 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
+    ./wm/i3/i3.nix
+    ./wm/hyprland/hyprland.nix
+    ./utility/nvim/nvim.nix
+    ./utility/fish/fish.nix
+    ./utility/foot/foot.nix
+    ./wm/hyprland/hyprland.nix
+    ./wm/i3/i3.nix
   ];
 
   nixpkgs = {
@@ -40,8 +46,8 @@
 
   # TODO: Set your username
   home = {
-    username = "your-username";
-    homeDirectory = "/home/your-username";
+    username = "maxh";
+    homeDirectory = "/home/maxh";
   };
 
   # Add stuff for your user as you see fit:

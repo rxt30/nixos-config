@@ -14,6 +14,7 @@
     ./packages/mime-packages.nix
     ./utility/fish/fish.nix
     ./utility/nvim/nvim.nix
+    ./utility/foot/foot.nix
     ./wm/i3/i3.nix
     ./wm/hyprland/hyprland.nix
   ];
