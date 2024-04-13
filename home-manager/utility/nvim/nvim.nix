@@ -120,5 +120,8 @@
     "${parsers}/parser";
 
   # Normal LazyVim config here, see https://github.com/LazyVim/starter/tree/main/lua
-  xdg.configFile."nvim/lua".source = ./lua;
+  xdg.configFile."nvim/lua/config".source = ./lua/config;
+  xdg.configFile."nvim/lua/plugins/colorscheme.lua".source = ./lua/plugins/colorscheme.lua;
+  xdg.configFile."nvim/lua/plugins/lsp.lua".source = ./lua/plugins/lsp.lua;
+  xdg.configFile."nvim/lua/plugins/cmp_tab.lua".source = ./lua/plugins/cmp_tab.lua;
 }

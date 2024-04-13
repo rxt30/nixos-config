@@ -23,5 +23,6 @@
     discord
     spotify
     pavucontrol
+    zotero
   ];
 }

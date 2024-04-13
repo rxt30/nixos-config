@@ -16,6 +16,7 @@
     ./wm/hyprland/hyprland.nix
     ./utility/nvim/nvim.nix
     ./utility/fish/fish.nix
+    ./utility/latex/latex.nix
   ];
 
   nixpkgs = {
