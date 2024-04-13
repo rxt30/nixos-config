@@ -14,5 +14,6 @@
     nodejs
     xterm
     fish
+    sqlite
   ];
 }
