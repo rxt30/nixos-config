@@ -92,7 +92,7 @@
   users.users.mime = {
     isNormalUser = true;
     initialPassword = "pleasechangeme";
-    extraGroups = [ "wheel" "vboxsf" ];
+    extraGroups = [ "wheel" "vboxsf" "docker"];
     shell = pkgs.fish;
   };
   system.stateVersion = "23.11"; # Did you read the comment?

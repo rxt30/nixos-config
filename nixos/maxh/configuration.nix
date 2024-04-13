@@ -99,7 +99,7 @@
   users.users.maxh = {
     isNormalUser = true;
     initialPassword = "pleasechangeme";
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "docker"];
     shell = pkgs.fish;
   };
 
