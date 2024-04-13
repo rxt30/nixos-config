@@ -12,6 +12,7 @@
 
     hyprlock.url = "github:hyprwm/Hyprlock";
     hypridle.url = "github:hyprwm/Hypridle";
+    hyprpaper.url = "github:hyprwm/Hyprpaper";
 
     # Shameless plug: looking for a way to nixify your themes and make
     # everything match nicely? Try nix-colors!
@@ -24,6 +25,7 @@
     home-manager,
     hyprlock,
     hypridle,
+    hyprpaper,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -53,6 +55,7 @@
         modules = [
         hyprlock.homeManagerModules.hyprlock
         hypridle.homeManagerModules.hypridle
+        hyprpaper.homeManagerModules.hyprpaper
         ./home-manager/maxh.nix
         ];
       };

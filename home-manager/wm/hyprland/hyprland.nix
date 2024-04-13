@@ -122,6 +122,7 @@
     ../../utility/kanshi/kanshi.nix
     ../../utility/hyprlock/hyprlock.nix
     ../../utility/hypridle/hypridle.nix
+    ../../utility/hyprpaper/hyprpaper.nix
   ];
   home.packages = with pkgs; [
     wl-clipboard

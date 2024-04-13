@@ -12,6 +12,7 @@
     };
     eza = {
       enable = true;
+      enableFishIntegration = false;
       icons = true;
       git = true;
     };
