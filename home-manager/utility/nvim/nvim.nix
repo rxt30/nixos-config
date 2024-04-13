@@ -114,6 +114,8 @@
         paths = (pkgs.vimPlugins.nvim-treesitter.withPlugins (plugins: with plugins; [
           c
           lua
+          latex
+          nix
         ])).dependencies;
       };
     in

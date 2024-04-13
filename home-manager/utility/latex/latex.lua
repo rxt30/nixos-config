@@ -4,6 +4,8 @@ return {
 		opts = {
 			servers = {
 				digestif = {},
+				ltex = {},
+				texlab = {},
 			},
 		},
 	},
