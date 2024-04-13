@@ -103,6 +103,17 @@
     shell = pkgs.fish;
   };
 
+  system.autoUpgrade = {
+      enable = true;
+      flake = inputs.self.outPath;
+      flags = [
+        "--update-input"
+        "nixpkgs"
+        "-L"
+      ];
+      dates = "12:00";
+      randomizedDelaySec = "45min";
+    };
   system.stateVersion = "23.11"; # Did you read the comment?
 }
 
