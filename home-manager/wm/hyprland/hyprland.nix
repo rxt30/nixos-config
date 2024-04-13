@@ -3,6 +3,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
+    systemd.variables = ["--all"];
     settings = {
       input = {
         kb_layout = "de";
