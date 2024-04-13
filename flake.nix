@@ -10,8 +10,8 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    # TODO: Add any other flake you might need
-    # hardware.url = "github:nixos/nixos-hardware";
+    hyprlock.url = "github:hyprwm/Hyprlock";
+    hypridle.url = "github:hyprwm/Hypridle";
 
     # Shameless plug: looking for a way to nixify your themes and make
     # everything match nicely? Try nix-colors!
@@ -22,6 +22,8 @@
     self,
     nixpkgs,
     home-manager,
+    hyprlock,
+    hypridle,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -29,7 +31,6 @@
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
-      # FIXME replace with your hostname
       maxh-nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         # > Our main nixos configuration file <
@@ -45,12 +46,15 @@
     # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
-      # FIXME replace with your username@hostname
       "maxh@maxh-nixos" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
         # > Our main home-manager configuration file <
-        modules = [./home-manager/maxh.nix];
+        modules = [
+        hyprlock.homeManagerModules.hyprlock
+        hypridle.homeManagerModules.hypridle
+        ./home-manager/maxh.nix
+        ];
       };
       "mime@maxh-nixos" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance

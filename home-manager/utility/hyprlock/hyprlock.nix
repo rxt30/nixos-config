@@ -7,15 +7,15 @@
         no_fade_out = true;
         ignore_empty_input = true;
       };
-      background = {
+      backgrounds = [{
         path = "~/.config/hyprlock/wall.png";
-      };
-      prompt = {
+      }];
+      input-fields = [{
         fade_on_empty = false;
-        };
-      label = {
-        text = "Welcome back, $USER";
-      };
+        }];
+      labels = [{
+        text = "Welcome back, it's currently $TIME";
+      }];
     };
   xdg.configFile."hyprlock/wall.png".source = ./wall.png;
 }

@@ -120,8 +120,8 @@
     ../../utility/dunst/dunst.nix
     ../../utility/waybar/waybar.nix
     ../../utility/kanshi/kanshi.nix
-    ../../utility/swayidle/swayidle.nix
-    ../../utility/swaylock/swaylock.nix
+    ../../utility/hyprlock/hyprlock.nix
+    ../../utility/hypridle/hypridle.nix
   ];
   home.packages = with pkgs; [
     wl-clipboard
