@@ -3,7 +3,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    systemd.variables = ["--all"];
+    systemd.variables = [ "--all" ];
     settings = {
       input = {
         kb_layout = "de";
@@ -31,7 +31,11 @@
         mouse_move_enables_dpms = true;
       };
 
-      monitor = ",preferred,auto,1";
+      monitor = [
+        ",preferred,auto,1"
+        ",preferred,auto,2"
+        ",preferred,auto,3"
+      ];
       bind = [
         # Workspace stuff
         "ALT,u,workspace,r-1"
@@ -103,7 +107,7 @@
 
       animation = [
         "workspaces,1,3,default"
-        "workspaces,1,3,default"
+        "windows,1,3,default"
       ];
     };
 
