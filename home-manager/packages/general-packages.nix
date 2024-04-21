@@ -23,5 +23,6 @@
   home.packages = with pkgs; [
     conda
     nerdfonts
+    htop
   ];
 }
