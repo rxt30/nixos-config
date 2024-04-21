@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 {
   programs.fish.enable = true;
-  virtualisation.docker.enable = true;
+  # virtualisation.docker.enable = true;
 
   environment.systemPackages = with pkgs; [
     inputs.home-manager.packages.${pkgs.system}.default
@@ -16,5 +16,7 @@
     xterm
     fish
     sqlite
+    htop
+    zip
   ];
 }

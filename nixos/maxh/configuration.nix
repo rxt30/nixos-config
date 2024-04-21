@@ -93,7 +93,7 @@
   services.printing.enable = true;
   services.avahi = {
       enable = true;
-      nssmdns = true;
+      nssmdns4 = true;
       openFirewall = true;
     };
 
@@ -101,12 +101,33 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
+  # bluetooth
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  services.blueman.enable = true;
+  # hardware.pulseaudio.package = pkgs.pulseaudio.override { jackaudioSupport = true; };
+  # musnix.enable = true;
+  # services.jack = {
+  #     jackd.enable = true;
+  #     alsa.enable = false;
+  #     loopback.enable = true;
+  #   };
+
   users.users.maxh = {
     isNormalUser = true;
     initialPassword = "pleasechangeme";
-    extraGroups = [ "wheel" "docker"];
+    extraGroups = [ "wheel" "docker" "audio" "jackaudio"];
     shell = pkgs.fish;
   };
+
+  virtualisation.containers.enable = true;
+  virtualisation = {
+      podman = {
+          enable = true;
+          dockerCompat = true;
+          defaultNetwork.settings.dns_enabled = true;
+        };
+    };
 
   system.autoUpgrade = {
       enable = true;
