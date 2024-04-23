@@ -17,6 +17,7 @@
     ./utility/nvim/nvim.nix
     ./utility/fish/fish.nix
     ./utility/latex/latex.nix
+    ./utility/renoise/renoise.nix
   ];
 
   nixpkgs = {

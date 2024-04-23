@@ -92,10 +92,10 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
   services.avahi = {
-      enable = true;
-      nssmdns4 = true;
-      openFirewall = true;
-    };
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
 
   # Enable sound.
   sound.enable = true;
@@ -106,7 +106,7 @@
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
   # hardware.pulseaudio.package = pkgs.pulseaudio.override { jackaudioSupport = true; };
-  # musnix.enable = true;
+  musnix.enable = true;
   # services.jack = {
   #     jackd.enable = true;
   #     alsa.enable = false;
@@ -116,30 +116,38 @@
   users.users.maxh = {
     isNormalUser = true;
     initialPassword = "pleasechangeme";
-    extraGroups = [ "wheel" "docker" "audio" "jackaudio"];
+    extraGroups = [ "wheel" "docker" "audio" "jackaudio" ];
     shell = pkgs.fish;
   };
 
   virtualisation.containers.enable = true;
   virtualisation = {
-      podman = {
-          enable = true;
-          dockerCompat = true;
-          defaultNetwork.settings.dns_enabled = true;
-        };
+    podman = {
+      enable = true;
+      dockerCompat = true;
+      defaultNetwork.settings.dns_enabled = true;
     };
+  };
+
+  services.openvpn.servers = {
+    protonVPN = {
+      config = '' 
+      config /home/maxh/Documents/openvpn/nl-free-137152.protonvpn.udp.ovpn
+      '';
+    };
+  };
 
   system.autoUpgrade = {
-      enable = true;
-      flake = inputs.self.outPath;
-      flags = [
-        "--update-input"
-        "nixpkgs"
-        "-L"
-      ];
-      dates = "12:00";
-      randomizedDelaySec = "45min";
-    };
+    enable = true;
+    flake = inputs.self.outPath;
+    flags = [
+      "--update-input"
+      "nixpkgs"
+      "-L"
+    ];
+    dates = "12:00";
+    randomizedDelaySec = "45min";
+  };
   system.stateVersion = "23.11"; # Did you read the comment?
 }
 
