@@ -31,11 +31,12 @@
         mouse_move_enables_dpms = true;
       };
 
-      monitor = [
-        ",preferred,auto,1"
-        ",preferred,auto,2"
-        ",preferred,auto,3"
-      ];
+      monitor = ",preferred,auto,1";
+      # monitor = [
+      #   ",preferred,auto,1"
+      #   ",preferred,auto,2"
+      #   ",preferred,auto,3"
+      # ];
       bind = [
         # Workspace stuff
         "ALT,u,workspace,r-1"
