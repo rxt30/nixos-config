@@ -18,6 +18,7 @@
     ./utility/fish/fish.nix
     ./utility/latex/latex.nix
     ./utility/renoise/renoise.nix
+    ./utility/markdown/markdown.nix
   ];
 
   nixpkgs = {
