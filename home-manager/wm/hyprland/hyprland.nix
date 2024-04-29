@@ -52,7 +52,7 @@
         "ALT,q,killactive"
         "ALT CTRL,q,exit"
         "ALT,p,exec,fuzzel"
-        "SUPER,l,exec,swaylock"
+        "SUPER,l,exec,loginctl lock-session"
 
         # Window management
         "ALT,SPACE,togglefloating,"
@@ -98,7 +98,7 @@
 
       exec-once = [
         "dunst"
-        "waybar"
+        # "waybar"
         "flameshot"
         "kanshi"
         "swayidle"
