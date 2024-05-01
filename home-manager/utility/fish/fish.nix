@@ -1,8 +1,4 @@
-{ inputs
-, lib
-, config
-, pkgs
-, ...
+{ ...
 }: {
   programs.fish = {
     enable = true;
@@ -11,6 +7,10 @@
     # '';
     shellAliases = {
       hex = "math --base=hex";
+      nix-config = "cd ~/Documents/projects/nix-config";
+      thesis = "cd ~/Documents/tuD/thesis/thesis/thesis/";
+      hypridle-stop = "systemctl --user stop hypridle";
+      hypridle-start = "systemctl --user start hypridle";
     };
 
     shellInit = ''
