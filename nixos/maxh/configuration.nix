@@ -82,10 +82,10 @@
     };
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
-    libinput.enable = true;
     windowManager.i3.enable = true;
     windowManager.i3.package = pkgs.i3-gaps;
   };
+  services.libinput.enable = true;
   programs.hyprland.enable = true;
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
 
