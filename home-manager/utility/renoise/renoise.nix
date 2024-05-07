@@ -5,6 +5,6 @@
     yabridge
     yabridgectl
     synthv1
-    vital
+    # vital
   ];
 }
