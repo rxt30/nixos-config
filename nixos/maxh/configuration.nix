@@ -116,18 +116,20 @@
   users.users.maxh = {
     isNormalUser = true;
     initialPassword = "pleasechangeme";
-    extraGroups = [ "wheel" "docker" "audio" "jackaudio" ];
+    extraGroups = [ "wheel" "docker" "audio" "jackaudio" "libvirtd" ];
     shell = pkgs.fish;
   };
 
-  virtualisation.containers.enable = true;
   virtualisation = {
+    containers.enable = true;
     podman = {
       enable = true;
       dockerCompat = true;
       defaultNetwork.settings.dns_enabled = true;
     };
+    libvirtd.enable = true;
   };
+  programs.virt-manager.enable = true;
 
   services.openvpn.servers = {
     protonVPN = {
@@ -136,6 +138,7 @@
       '';
     };
   };
+
 
   system.autoUpgrade = {
     enable = true;
@@ -148,6 +151,12 @@
     dates = "12:00";
     randomizedDelaySec = "45min";
   };
+  # services.pcscd.enable = true;
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   # pinentryFlavor = "curses";
+  #   enableSSHSupport = true;
+  # };
   system.stateVersion = "23.11"; # Did you read the comment?
 }
 
