@@ -1,6 +1,7 @@
 # This is your home-manager configuration file
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
-{ ...
+{ pkgs
+, ...
 }: {
   # You can import other home-manager modules here
   imports = [
@@ -19,6 +20,7 @@
     ./utility/latex/latex.nix
     ./utility/renoise/renoise.nix
     ./utility/markdown/markdown.nix
+    ./utility/python/python.nix
   ];
 
   nixpkgs = {
@@ -61,4 +63,11 @@
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "23.05";
+  services.gnome-keyring.enable = true;
+
+  # programs.gpg.enable = true;
+  # services.gpg-agent = {
+  #   enable = true;
+  #   pinentryPackage = pkgs.pinentry-gnome3;
+  # };
 }

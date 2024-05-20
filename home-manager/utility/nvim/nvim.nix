@@ -116,6 +116,8 @@
           lua
           latex
           nix
+          python
+          markdown
         ])).dependencies;
       };
     in

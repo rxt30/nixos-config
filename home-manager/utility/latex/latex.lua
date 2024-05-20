@@ -4,7 +4,11 @@ return {
 		opts = {
 			servers = {
 				digestif = {},
-				ltex = {},
+				ltex = {
+					settings = {
+						checkFrequency = "save",
+					},
+				},
 				texlab = {},
 			},
 		},

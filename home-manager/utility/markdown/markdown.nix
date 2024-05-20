@@ -2,7 +2,7 @@
 {
   programs.neovim.extraPackages = with pkgs; [
     cbfmt
-    mdformat
+    python311Packages.mdformat-gfm
     marksman
     deno
   ];
