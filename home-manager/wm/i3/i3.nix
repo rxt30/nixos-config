@@ -10,12 +10,12 @@ in
       modifier = mod;
       floating.modifier = mod;
       keybindings = lib.mkOptionDefault {
-        "${mod}+Return" = "exec kitty";
+        "${mod}+Return" = "exec alacritty";
         "${mod}+q" = "kill";
         "${mod}+p" = "exec \"rofi -modi drun, run -show drun\"";
         "Print" = "exec \"grimshot save area - | swappy -f -\"";
         "$win+Shift+p" = "exec \"~/.config/sway/duplicateDisplay.sh\"";
-        "${mod}+b" = "exec \"MOZ_ENABLE_WAYLAND=1 firefox\"";
+        "${mod}+b" = "exec \"firefox\"";
 
         "${mod}+h" = "focus left";
         "${mod}+j" = "focus down";
@@ -47,8 +47,8 @@ in
         "${mod}+8" = "workspace number \"8\"";
         "${mod}+9" = "workspace number \"9\"";
         "${mod}+0" = "workspace number \"10\"";
-        "${mod}+u" = "exec \"python ~/.config/sway/switch_workspace.py -b\"";
-        "${mod}+o" = "exec \"python ~/.config/sway/switch_workspace.py\"";
+        "${mod}+u" = "exec \"python ~/.config/i3/switch_workspace.py -b\"";
+        "${mod}+o" = "exec \"python ~/.config/i3/switch_workspace.py\"";
 
         "${mod}+Shift+1" = "move container to workspace number \"1\"";
         "${mod}+Shift+2" = "move container to workspace number \"2\"";
@@ -60,8 +60,8 @@ in
         "${mod}+Shift+8" = "move container to workspace number \"8\"";
         "${mod}+Shift+9" = "move container to workspace number \"9\"";
         "${mod}+Shift+0" = "move container to workspace number \"10\"";
-        "${mod}+Shift+u" = "exec \"python ~/.config/sway/switch_workspace.py -c -b && python ~/.config/sway/switch_workspace.py -b\"";
-        "${mod}+Shift+o" = "exec \"python ~/.config/sway/switch_workspace.py -c && python ~/.config/sway/switch_workspace.py\"";
+        "${mod}+Shift+u" = "exec \"python ~/.config/i3/switch_workspace.py -c -b && python ~/.config/i3/switch_workspace.py -b\"";
+        "${mod}+Shift+o" = "exec \"python ~/.config/i3/switch_workspace.py -c && python ~/.config/i3/switch_workspace.py\"";
 
         "${mod}+Shift+r" = "reload";
         "${mod}+Shift+q" = "quit";

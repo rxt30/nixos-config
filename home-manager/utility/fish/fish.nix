@@ -6,10 +6,12 @@
       hex = "math --base=hex";
       nix-config = "cd ~/Documents/projects/nix-config";
       thesis = "cd ~/Documents/tuD/thesis/thesis/thesis/";
-      scripts = "cd ~/Documents/tuD/thesis/thesis/scripts/ && source .venv/bin/activate.fish";
+      scripts = "cd ~/Documents/tuD/thesis/thesis/scripts/ && conda activate thesis";
       hypridle-stop = "systemctl --user stop hypridle";
       hypridle-start = "systemctl --user start hypridle";
       vim = "nvim";
+      hs = "home-manager switch --flake .#maxh@maxh-nixos --extra-experimental-features nix-command --e
+xtra-experimental-features flakes";
     };
 
     shellInit = ''
