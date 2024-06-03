@@ -15,10 +15,11 @@
     ./packages/lsp.nix
     ./wm/i3/i3.nix
     ./wm/hyprland/hyprland.nix
+    # ./wm/awesome/awesome.nix
     ./utility/nvim/nvim.nix
     ./utility/fish/fish.nix
     ./utility/latex/latex.nix
-    ./utility/renoise/renoise.nix
+    # ./utility/renoise/renoise.nix
     ./utility/markdown/markdown.nix
     ./utility/python/python.nix
   ];

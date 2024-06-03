@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    texliveFull
+    # texliveFull
   ];
   programs.neovim.extraPackages = with pkgs; [
     ltex-ls
