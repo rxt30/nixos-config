@@ -10,8 +10,7 @@
       hypridle-stop = "systemctl --user stop hypridle";
       hypridle-start = "systemctl --user start hypridle";
       vim = "nvim";
-      hs = "home-manager switch --flake .#maxh@maxh-nixos --extra-experimental-features nix-command --e
-xtra-experimental-features flakes";
+      hs = "home-manager switch --flake .#maxh@maxh-nixos --extra-experimental-features nix-command --extra-experimental-features flakes";
     };
 
     shellInit = ''
