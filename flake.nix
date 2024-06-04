@@ -10,9 +10,9 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    hyprlock.url = "github:hyprwm/Hyprlock";
-    hypridle.url = "github:hyprwm/Hypridle";
-    hyprpaper.url = "github:hyprwm/Hyprpaper";
+    # hyprlock.url = "github:hyprwm/Hyprlock";
+    # hypridle.url = "github:hyprwm/Hypridle";
+    # hyprpaper.url = "github:hyprwm/Hyprpaper";
 
     musnix.url = "github:musnix/musnix";
     # Shameless plug: looking for a way to nixify your themes and make
@@ -24,9 +24,9 @@
     { self
     , nixpkgs
     , home-manager
-    , hyprlock
-    , hypridle
-    , hyprpaper
+      # , hyprlock
+      # , hypridle
+      # , hyprpaper
     , musnix
     , ...
     } @ inputs:
@@ -60,9 +60,9 @@
           extraSpecialArgs = { inherit inputs outputs; };
           # > Our main home-manager configuration file <
           modules = [
-            hyprlock.homeManagerModules.hyprlock
-            hypridle.homeManagerModules.hypridle
-            hyprpaper.homeManagerModules.hyprpaper
+            # hyprlock.homeManagerModules.hyprlock
+            # hypridle.homeManagerModules.hypridle
+            # hyprpaper.homeManagerModules.hyprpaper
             ./home-manager/maxh.nix
           ];
         };
@@ -71,9 +71,9 @@
           extraSpecialArgs = { inherit inputs outputs; };
           # > Our main home-manager configuration file <
           modules = [
-            hyprlock.homeManagerModules.hyprlock
-            hypridle.homeManagerModules.hypridle
-            hyprpaper.homeManagerModules.hyprpaper
+            # hyprlock.homeManagerModules.hyprlock
+            # hypridle.homeManagerModules.hypridle
+            # hyprpaper.homeManagerModules.hyprpaper
             ./home-manager/mime.nix
           ];
         };

@@ -17,6 +17,11 @@ xtra-experimental-features flakes";
     shellInit = ''
       bind \cb "cd ..; commandline -f repaint"
       fish_add_path -aP ~/.nix-profile/bin/
+      if command -q eza
+        alias lss="eza -la"
+        alias ls="eza -l --icons --git"
+        alias l="eza"
+      end
 
       
       # >>> conda initialize >>>

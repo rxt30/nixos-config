@@ -1,13 +1,15 @@
 { ... }:
 {
   services.hyprpaper = {
-      enable = true;
-      preloads = [
+    enable = true;
+    settings = {
+      preload = [
         "~/.config/hyprpaper/wall.png"
       ];
-      wallpapers = [
+      wallpaper = [
         ",contain:~/.config/hyprpaper/wall.png"
       ];
     };
+  };
   xdg.configFile."hyprpaper/wall.png".source = ./wall.png;
 }
