@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.hyprlock =
     {
@@ -12,10 +12,10 @@
         background = [{
           path = "~/.config/hyprlock/wall.png";
         }];
-        input-fields = [{
+        input-field = [{
           fade_on_empty = false;
         }];
-        labels = [{
+        label = [{
           text = "Welcome back, it's currently $TIME";
         }];
       };

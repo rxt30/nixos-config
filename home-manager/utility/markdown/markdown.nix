@@ -6,5 +6,5 @@
     marksman
     deno
   ];
-  xdg.configFile."nvim/lua/plugins/markdown.lua".source = ./markdown.lua;
+  # xdg.configFile."nvim/lua/plugins/markdown.lua".source = ./markdown.lua;
 }
