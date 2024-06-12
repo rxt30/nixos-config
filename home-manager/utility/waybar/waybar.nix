@@ -21,7 +21,7 @@
           };
 
           backlight = {
-            format = " {percent}%";
+            format = " {percent}%";
             on-scroll-up = "brightnessctl set 5%+";
             on-scroll-down = "brightnessctl set 5%-";
 
@@ -50,9 +50,9 @@
               critical = 15;
             };
             format-icons = {
-              discharging = [ "" "" "" "" "" "" "" "" "" "" "" ];
-              plugged = "";
-              charging = "";
+              discharging = [ "" "󰁺" "󰁻" "" "" "" "" "󰂀" "󰂁" "󰂂" "" ];
+              plugged = "󰂄";
+              charging = "󰂄";
             };
           };
 
